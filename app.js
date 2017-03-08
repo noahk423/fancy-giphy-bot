@@ -9,10 +9,10 @@ const request = require('request');
 
 var tokenizer = new natural.WordTokenizer();
 
-var config =  { token:GROUPMETOKEN=c6bea960e5d60134a97b07d127d99078,
+var config =  { token:GROUPMETOKEN,
                 name: "Giphy",
-                group: GROUP=29518040,
-                url: URL=https://hidden-tor-41294.herokuapp.com/
+                group: GROUP,
+                url: URL
               };
 
 const AVATAR = process.env['AVATAR'];
@@ -20,7 +20,7 @@ if (AVATAR) {
   config.avatar_url = AVATAR;
 }
 
-var giphy = require('giphy-wrapper')(GIPHYTOKEN=dc6zaTOxFJmzC);
+var giphy = require('giphy-wrapper')(GIPHYTOKEN);
 var bot = require('fancy-groupme-bot')(config);
 
 bot.on('botRegistered', function() {
